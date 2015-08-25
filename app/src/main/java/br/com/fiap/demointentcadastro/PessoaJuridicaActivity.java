@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class PessoaJuridicaActivity extends AppCompatActivity {
 
@@ -22,21 +23,19 @@ public class PessoaJuridicaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pessoa_juridica);
 
-        etNome = (EditText)findViewById(R.id.etNome);
-        etCnpj = (EditText)findViewById(R.id.etCnpj);
-        etTelefone = (EditText)findViewById(R.id.etTelefone);
-        etEmail = (EditText)findViewById(R.id.etEmail);
-        etSite = (EditText)findViewById(R.id.etSite);
-
-
+        etNome = (EditText) findViewById(R.id.etNome);
+        etCnpj = (EditText) findViewById(R.id.etCnpj);
+        etTelefone = (EditText) findViewById(R.id.etTelefone);
+        etEmail = (EditText) findViewById(R.id.etEmail);
+        etSite = (EditText) findViewById(R.id.etSite);
     }
 
-    public void openSite(View v){
-        if(etSite.getText() != null) {
+    public void openSite(View v) {
+        if (etSite.getText() != null) {
             String url = etSite.getText().toString();
 
             // Tive um erro pois no primeiro teste nao coloquei http. Esse validate resolve.
-            if (!url.startsWith("https://") && !url.startsWith("http://")){
+            if (!url.startsWith("https://") && !url.startsWith("http://")) {
                 url = "http://" + url;
             }
 
@@ -46,8 +45,8 @@ public class PessoaJuridicaActivity extends AppCompatActivity {
         }
     }
 
-    public void sendMail(View v){
-        if(etEmail.getText() != null) {
+    public void sendMail(View v) {
+        if (etEmail.getText() != null) {
             Intent intent = new Intent(Intent.ACTION_VIEW);
             Uri data = Uri.parse("mailto:" + etEmail.getText().toString());
             intent.setData(data);
@@ -61,8 +60,8 @@ public class PessoaJuridicaActivity extends AppCompatActivity {
         }
     }
 
-    public void placeCall(View v){
-        if(etTelefone.getText() != null) {
+    public void placeCall(View v) {
+        if (etTelefone.getText() != null) {
             Intent callIntent = new Intent(Intent.ACTION_CALL);
             callIntent.setData(Uri.parse("tel:" + etTelefone.getText().toString()));
             startActivity(callIntent);
@@ -84,10 +83,12 @@ public class PessoaJuridicaActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.itGravar) {
+            Toast.makeText(this, R.string.lbl_gravar, Toast.LENGTH_SHORT).show();
             return true;
         }
 
         return super.onOptionsItemSelected(item);
     }
+
 }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DemoIntentCadastro</string>
+    <string name="lblNome">Nome</string>
+    <string name="lblNomeEmpresa">Nome Empresa</string>
+    <string name="lblPF">Pessoa Fisica</string>
+    <string name="lblPJ">Pessoa Juridica</string>
+    <string name="lblSite">Site</string>
+    <string name="lblTelefone">Telefone</string>
+    <string name="lbl_gravar">Salvar</string>
+    <string name="message">Dados Gravados com sucesso</string>
+    <string name="title_activity_pessoa_juridica">Pessoa Juridica</string>
+    <string name="title_activity_main">Menu Principal</string>
+    <string name="title_activity_pessoa_fisica">Pessoa Fisica</string>
+</resources>

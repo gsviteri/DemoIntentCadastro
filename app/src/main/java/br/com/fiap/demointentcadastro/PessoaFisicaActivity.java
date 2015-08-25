@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class PessoaFisicaActivity extends AppCompatActivity {
 
@@ -28,7 +29,6 @@ public class PessoaFisicaActivity extends AppCompatActivity {
         etEmail = (EditText)findViewById(R.id.etEmail);
         etSite = (EditText)findViewById(R.id.etSite);
 
-
     }
 
     public void openSite(View v){
@@ -48,9 +48,14 @@ public class PessoaFisicaActivity extends AppCompatActivity {
 
     public void sendMail(View v){
         if(etEmail.getText() != null) {
-            Intent intent = new Intent(Intent.ACTION_SEND, Uri.parse("mailto:"+etEmail.getText().toString()));
-            //intent.setData(Uri.parse("mailto:"+etEmail.getText().toString()));
-            startActivity(intent);
+            Intent email = new Intent(Intent.ACTION_SEND);
+            email.setType("message/rfc822");
+            email.putExtra(Intent.EXTRA_EMAIL, new String[]{etEmail.getText().toString()});
+            try {
+                startActivity(Intent.createChooser(email, "Enviar e-mail..."));
+            } catch (android.content.ActivityNotFoundException ex) {
+                Toast.makeText(PessoaFisicaActivity.this, "Nenhum cliente de e-mail instalado", Toast.LENGTH_SHORT).show();
+            }
         }
 
     }
@@ -78,10 +83,12 @@ public class PessoaFisicaActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.itGravar) {
+            Toast.makeText(this, R.string.lbl_gravar, Toast.LENGTH_SHORT).show();
             return true;
         }
 
         return super.onOptionsItemSelected(item);
     }
+
 }

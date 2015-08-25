@@ -12,7 +12,7 @@
 
         <activity
             android:name="br.com.fiap.demointentcadastro.PessoaFisicaActivity"
-            android:label="@string/app_name" >
+            android:label="@string/title_activity_pessoa_fisica" >
 
             <intent-filter>
                 <action android:name="br.com.fiap.demointentcadastro.action.CADASTRO"></action>

@@ -12,7 +12,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nome Empresa"
+        android:text="@string/lblNomeEmpresa"
         android:inputType="textPersonName"/>
     <EditText
         android:layout_width="match_parent"
@@ -22,7 +22,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CNPJ" />
+        android:text="@string/lblCNPJ" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -33,7 +33,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Telefone"
+        android:text="@string/lblTelefone"
         android:layout_marginTop="25dp"/>
     <LinearLayout
         android:layout_width="match_parent"
@@ -59,7 +59,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="E-Mail" />
+        android:text="@string/lblEmail" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -81,7 +81,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Site" />
+        android:text="@string/lblSite" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

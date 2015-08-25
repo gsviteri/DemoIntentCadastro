@@ -3,6 +3,19 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_pessoa_juridica">PessoaJuridicaActivity</string>
+    <string name="title_activity_pessoa_juridica">Pessoa Juridica </string>
+    <string name="title_activity_pessoa_fisica">Pessoa Fisica </string>
+
     <string name="title_activity_main">MainActivity</string>
+    <string name="lbl_gravar">Gravar</string>
+    <string name="lblPF">Pessoa Fisica</string>
+    <string name="lblPJ">Pessoa Juridica</string>
+    <string name="lblTelefone">Telefone</string>
+    <string name="lblCPF" translatable="false">CPF</string>
+    <string name="lblNome">Nome</string>
+    <string name="lblEmail" translatable="false">Email</string>
+    <string name="lblSite">Site</string>
+    <string name="lblNomeEmpresa">Nome Empresa</string>
+    <string name="lblCNPJ" translatable="false">CNPJ</string>
+    <string name="message">Dados Gravados com Sucesso</string>
 </resources>
