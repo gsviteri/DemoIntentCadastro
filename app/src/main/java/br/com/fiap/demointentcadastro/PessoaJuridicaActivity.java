@@ -84,7 +84,7 @@ public class PessoaJuridicaActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.itGravar) {
-            Toast.makeText(this, R.string.lbl_gravar, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.message, Toast.LENGTH_SHORT).show();
             return true;
         }
 
